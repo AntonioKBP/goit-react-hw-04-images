@@ -18,16 +18,14 @@ export const Modal = ({ onClose, children }) => {
 
   useEffect(() => {
     const handleKeyDown = e => {
-      console.log(e.code);
       if (e.code === 'Escape') {
         onClose();
       }
     };
-
-    window.addEventListener('keydown', handleKeyDown());
+    window.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      window.removeEventListener('keydown', handleKeyDown());
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, [onClose]);
 
