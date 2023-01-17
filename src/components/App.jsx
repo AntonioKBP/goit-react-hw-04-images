@@ -63,7 +63,7 @@ export const App = () => {
         setImage(prev => [...prev, ...data.hits]);
         setImageHits(data);
 
-        if (image.length === 1) {
+        if (page === 1) {
           toast.success(`We found ${data.total} images`);
         }
       } catch (error) {
@@ -75,8 +75,6 @@ export const App = () => {
     };
     fetchData();
   }, [search, page]);
-
-  // showModal: !pS.showModal,
 
   const toggleModal = () => {
     setShowModal(pS => !pS);
