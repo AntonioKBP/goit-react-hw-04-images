@@ -29,8 +29,6 @@ export const Modal = ({ onClose, children }) => {
     };
   }, [onClose]);
 
-  // const { children, onClose } = this.props;
-
   return createPortal(
     <>
       <ModalOverlay onClick={handleBackDrop}>
