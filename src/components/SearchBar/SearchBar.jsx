@@ -5,9 +5,6 @@ import { ReactComponent as Icon } from '../Icons/search.svg';
 import { SearchButton, Form, Header, Input } from './SearchBar.styled';
 
 export const SearchBar = ({ onSubmit }) => {
-  // state = {
-  //   value: '',
-  // };
   const [value, setValue] = useState('');
 
   const handleChange = e => {
@@ -21,7 +18,6 @@ export const SearchBar = ({ onSubmit }) => {
     setValue('');
   };
 
-  // const reset = () => {};
   return (
     <Header>
       <Form onSubmit={handleSubmit}>

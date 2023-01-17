@@ -18,16 +18,6 @@ const KEY = '31349139-c34332f5cc1455d1f889740ec';
 const BASE_URL = 'https://pixabay.com/api/?';
 
 export const App = () => {
-  // state = {
-  //   image: [],
-  //   search: '',
-  //   isLoading: false,
-  //   page: 1,
-  //   imageHits: [],
-  //   showModal: false,
-  //   url: '',
-  //   alt: '',
-  // };
   const [image, setImage] = useState([]);
   const [search, setSearch] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -38,7 +28,6 @@ export const App = () => {
   const [alt, setAlt] = useState('');
 
   const handleSearch = search => {
-    // this.setState({ search, page: 1, image: [] });
     setSearch(search);
     setPage(1);
     setImage([]);
